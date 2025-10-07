@@ -5,6 +5,9 @@ import { TimePicker } from "../components/TimePicker"
 import { useState } from "react";
 import StepIndicator from "../components/StepIndicator";
 import FilterDiscloture from "../components/FilterDiscloture";
+import FeatureTour from "../components/FeatureTour";
+import SetStatus from "../components/SetStatus";
+import EditBadge from "../components/EditBadge";
 
 const Test =()=>{
     const [date, setDate] = useState<Date | null>(null);
@@ -12,9 +15,20 @@ const Test =()=>{
     const [minutes, setMinutes] = useState(23);
     const [timeHours, setTimeHours] = useState(12);
     const [timeMinutes, setTimeMinutes] = useState(23);
+    const [showTour, setShowTour] = useState(true);
 
     return(
-        <div className="w-full h-screen p-4 bg-white flex flex-col items-center justify-center gap-8 rounded-xl shadow-sm border border-gray-100">
+        <div className="w-full h-screen p-4 bg-white flex flex-col items-center justify-center gap-8">
+            {/* <button 
+                onClick={() => setShowTour(true)}
+                className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+            >
+                Ouvrir le Feature Tour
+            </button> */}
+            {/* <SetStatus /> */}
+            <EditBadge />
+            {/* {showTour && <FeatureTour onClose={() => setShowTour(false)} />} */}
+
             {/* <div className="text-center">
                 <h2 className="text-xl font-semibold mb-4">Sélection de durée</h2>
                 <DurationPicker 
@@ -25,9 +39,9 @@ const Test =()=>{
                 />
             </div> */}
             {/* <StepIndicator /> */}
-            <FilterDiscloture />
+            {/* <FilterDiscloture /> */}
 
-            
+                
 
             {/* <div className="text-center">
                 <h2 className="text-xl font-semibold mb-4">Sélection de date</h2>
