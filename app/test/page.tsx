@@ -8,6 +8,7 @@ import FilterDiscloture from "../components/FilterDiscloture";
 import FeatureTour from "../components/FeatureTour";
 import SetStatus from "../components/SetStatus";
 import EditBadge from "../components/EditBadge";
+import InlineOverflow from "../components/InlineOverflow";
 
 const Test =()=>{
     const [date, setDate] = useState<Date | null>(null);
@@ -26,7 +27,8 @@ const Test =()=>{
                 Ouvrir le Feature Tour
             </button> */}
             {/* <SetStatus /> */}
-            <EditBadge />
+            {/* <EditBadge /> */}
+            <InlineOverflow />
             {/* {showTour && <FeatureTour onClose={() => setShowTour(false)} />} */}
 
             {/* <div className="text-center">
